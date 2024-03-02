@@ -40,7 +40,7 @@ function App() {
 
   const handleDeleteTask = (index) => {
     const newTasks = [...tasks];
-    newTasks.splice(editIndex, 1);
+    newTasks.splice(index, 1);
     setTasks(newTasks);
     setIsEditing(false);
     setShowForm(false);
@@ -50,7 +50,7 @@ function App() {
     e.stopPropagation();
     if (newTitle.trim() !== '') {
       const newTasks = [...tasks];
-      newTasks[editIndex].title = newTitle;
+      newTasks[index].title = newTitle;
       setTasks(newTasks);
       setIsEditing(false);
       setShowForm(false);
