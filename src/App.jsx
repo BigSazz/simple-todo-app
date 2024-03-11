@@ -93,14 +93,16 @@ function App() {
               <div key={index}>
                 <div className='bg-white w-[382px] h-[91px] flex px-4 items-center justify-between shadow-lg rounded-md'>
                   <div onClick={() => handleChange(index)} className='flex items-center space-x-4 cursor-pointer'>
-                    <div className={`p-2 border rounded-full ${completed ? "bg-[#53DA69] border-[1.5px] border-[#49C25D]" : "bg-white border-black"}`}>
+                    <div className={`p-2 border-[1.5px] rounded-full ${completed ? "bg-[#53DA69] border-[#49C25D]" : "bg-white border-[#071D55] "}`}>
                       <CheckIcon
                         className={`w-4 h-4 ${completed ? 'text-[#399649]' : 'text-white'}`}
                       />
                     </div>
-                    <p className={`${completed ? "text-gray-400 line-through" : "text-black"} font-[500px]`}>{title}</p>
+                    <p className={`${completed ? "text-[#8D8D8D] line-through" : "text-[#071D55]"} font-medium`}>{title}</p>
                   </div>
-                  <button data-testid="edit-task" onClick={() => onEditTask(task, index)} className='border border-[#071D55] text-[#071D55] py-2 px-2 rounded-md '>Edit</button>
+                  <button data-testid="edit-task" onClick={() => onEditTask(task, index)} className='border border-[#071D55] py-2 px-2 rounded-md '>
+                    <p className='text-[#071D55]'>Edit</p>
+                  </button>
                 </div>
               </div>
             )
